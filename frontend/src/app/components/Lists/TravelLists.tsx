@@ -9,7 +9,6 @@ interface ArticleListProps {
 }
 
 const TravelLists = ({lists,spinner,error}:ArticleListProps) => {
-    console.log(lists)
     if(error) return <p className="flex justify-center">{error}</p>;
     if(spinner) return <Spinner/>;
     if(!lists?.data) return <p className="text-center">No results found.</p>;
